@@ -10,6 +10,7 @@ gem 'coffee-rails', '~> 4.2'
 gem 'jquery-rails'
 gem 'jbuilder', '~> 2.5'
 gem 'bower-rails', '~> 0.11.0'
+gem 'angular-rails-templates', '1.0.2'
 
 group :development, :test do
   gem 'byebug', platform: :mri
