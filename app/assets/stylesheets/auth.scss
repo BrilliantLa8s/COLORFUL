@@ -1,0 +1,37 @@
+div.auth-container {
+  margin-top:50px;
+
+  & md-card.auth-form {
+    max-width:380px;
+    min-width:300px;
+    margin:0 auto;
+
+    & md-card-title {
+      // background-color:$green;
+      & h1 {
+        font-size:2.15em;
+        font-weight:400;
+        margin:0 10px 10px 10px;
+        white-space:nowrap;
+        color:$green;
+        & md-icon {
+          color: $green;
+          width: 34px;
+          height: 34px;
+          font-size: 34px;
+        }
+      }
+    }
+
+    & md-input-container {
+      margin:0 15px;
+      padding-bottom: 20px;
+      & input.md-input {
+        line-height:30px;
+      }
+    }
+  }
+  & .auth-links {
+    text-align:center;
+  }
+}

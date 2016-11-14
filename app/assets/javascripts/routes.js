@@ -16,8 +16,25 @@ colorful.config(['$stateProvider', '$locationProvider', '$urlRouterProvider',
   $stateProvider
   .state('cover', {
     url:'/',
-    template: 'COLORFUL app',
+    template: 'COLORFUL app {{user}}',
   })
+  .state('login', {
+    url:'/login',
+    templateUrl: 'login.html'
+  })
+  .state('register', {
+    url:'/register',
+    templateUrl: 'register.html'
+  })
+  .state('logout', {
+    url:'/logout',
+    templateProvider: function($auth, $state) {
+      $auth.signOut()
+        .then(function(resp) {
+          $state.go('cover')
+        }).catch(function(resp) {});
+    }
+  });
 
   // catchall route
   $urlRouterProvider.otherwise('/');

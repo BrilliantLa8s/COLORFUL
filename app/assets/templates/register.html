@@ -1,0 +1,61 @@
+<div class="auth-container">
+  <md-card class="auth-form" ng-controller="AuthCtrl">
+    <md-card-title>
+      <md-card-title-text >
+        <h1 layout="row">
+          Sign Up <span flex></span>
+          <md-icon>lock</md-icon>
+        </h1>
+      </md-card-title-text>
+    </md-card-title>
+    <md-divider></md-divider>
+    <md-card-content>
+      <form ng-submit="register(creds)" role="form">
+        <md-input-container md-no-float class="md-block">
+          <div class="error" ng-show="error">{{error}}</div>
+        </md-input-container>
+        <md-input-container md-no-float class="md-block">
+          <input type="text"
+                 name="name"
+                 id="name"
+                 ng-model="creds.name"
+                 placeholder="Your Name"
+                 autofocus="true"
+                 required/>
+        </md-input-container>
+        <md-input-container md-no-float class="md-block">
+          <input type="email"
+                 name="email"
+                 id="email"
+                 ng-model="creds.email"
+                 placeholder="Email Address"
+                 autofocus="true"
+                 required/>
+        </md-input-container>
+        <md-input-container md-no-float class="md-block">
+          <input type="password"
+                 name="password"
+                 id="password"
+                 ng-model="creds.password"
+                 placeholder="Choose Password"
+                 required/>
+        </md-input-container>
+        <md-input-container md-no-float class="md-block">
+          <input type="password"
+                 name="password"
+                 id="password"
+                 ng-model="creds.password_confirmation"
+                 placeholder="Choose Password"
+                 required/>
+        </md-input-container>
+        <md-input-container md-no-float class="md-block">
+          <md-button type="submit" class="block md-raised md-primary">Sign Up</md-button>
+        </md-input-container>
+      </form>
+    </md-card-content>
+    <md-divider></md-divider>
+    <md-card-content layout="row" layout-align="space-around center">
+      <a ui-sref="login">Already registered? Log in!</a>
+    </md-card-content>
+  </md-card>
+</div>
